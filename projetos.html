@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Projetos</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link active">Projetos</a>
+        <a href="loja.html" class="nav-link">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Entrar</a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link active">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-internal">
+    <div class="hero-internal-content">
+      <h1 class="hero-internal-title animate-fade-in-up">
+        Nossos Projetos
+      </h1>
+      <p class="hero-internal-subtitle animate-fade-in-up delay-1">
+        Conheça os projetos sociais que estão transformando vidas
+      </p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <div class="content-wrapper">
+      <!-- Search Section -->
+      <section class="animate-fade-in-up" style="max-width: 700px; margin: 0 auto 64px;">
+        <div class="search-input" style="margin-bottom: 24px;">
+          <input type="text" class="form-input" placeholder="Buscar projetos específicos..." aria-label="Buscar projetos"/>
+          <i data-lucide="search" class="search-input-icon" style="width: 20px; height: 20px;"></i>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 8px 20px; font-size: 0.875rem;">Todos</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Sociais</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Educação</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Saúde</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Comunidade</button>
+        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section>
+        <div class="grid-3">
+          <!-- Project Card 1 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-1" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="home" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(34, 197, 94, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em andamento</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Situação de Rua</h3>
+              <p class="card-description">
+                Apoio integral para pessoas em situação de vulnerabilidade, com abrigo, alimentação e reinserção social.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                  235 pessoas atendidas
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project Card 2 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-2" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="baby" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(34, 197, 94, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em andamento</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Crianças</h3>
+              <p class="card-description">
+                Educação e cuidado para crianças em situação de risco, com aulas de reforço e atividades recreativas.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                  180 crianças atendidas
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project Card 3 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-3" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="utensils" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(34, 197, 94, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em andamento</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Alimentação</h3>
+              <p class="card-description">
+                Distribuição de cestas básicas e refeições para famílias carentes da comunidade.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                  420 famílias beneficiadas
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project Card 4 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-1" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="stethoscope" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(34, 197, 94, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em andamento</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Saúde</h3>
+              <p class="card-description">
+                Atendimento médico e odontológico gratuito para a comunidade, com especialistas de diversas áreas.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                  890 atendimentos/mês
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project Card 5 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-2" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="book-open" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(34, 197, 94, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em andamento</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Educação</h3>
+              <p class="card-description">
+                Alfabetização de adultos e cursos profissionalizantes para qualificação profissional.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                  150 alunos matriculados
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project Card 6 -->
+          <a href="projeto-detalhe.html" class="card animate-fade-in-up delay-3" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="heart-handshake" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+              <div style="position: absolute; top: 16px; right: 16px; background: rgba(234, 179, 8, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Em breve</div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Projeto Terceira Idade</h3>
+              <p class="card-description">
+                Programa de inclusão digital e atividades sociais para idosos da comunidade.
+              </p>
+              <div class="card-meta">
+                <div class="card-meta-item">
+                  <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+                  Lançamento: Abril 2026
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section style="margin-top: 64px;" class="animate-fade-in-up delay-1">
+        <div style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); border-radius: 20px; padding: 64px 32px; text-align: center;">
+          <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; color: white; margin-bottom: 16px;">Quer Ajudar?</h2>
+          <p style="font-size: 1.125rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 32px;">
+            Você pode fazer parte dessa transformação. Seja um voluntário ou faça uma doação.
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn-primary">
+              <i data-lucide="hand-heart" style="width: 20px; height: 20px;"></i>
+              Quero Ser Voluntário
+            </button>
+            <button class="btn-secondary" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: white;">
+              <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+              Fazer Doação
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

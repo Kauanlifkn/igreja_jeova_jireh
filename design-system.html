@@ -1,0 +1,718 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vantage Design System</title>
+<script src="assets/resource_3fa48481346f.es"></script>
+<script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+<style>
+body {
+font-family: 'Inter', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.font-display { font-family: 'Montserrat', sans-serif; }
+@keyframes float {
+0% { transform: translate(0px, 0px) scale(1); }
+33% { transform: translate(30px, -50px) scale(1.1); }
+66% { transform: translate(-20px, 20px) scale(0.9); }
+100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-float-slow {
+animation: float 20s ease-in-out infinite;
+}
+.animate-float-medium {
+animation: float 15s ease-in-out infinite reverse;
+}
+.animate-fade-in-up {
+animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+opacity: 0;
+transform: translateY(20px);
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(40px) scale(0.96);
+filter: blur(4px);
+transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease-out;
+will-change: opacity, transform, filter;
+}
+.reveal-on-scroll.is-visible {
+opacity: 1;
+transform: translateY(0) scale(1);
+filter: blur(0);
+}
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+@keyframes float-showcase {
+0%, 100% { transform: translate(0, 0); }
+33% { transform: translate(10px, -15px); }
+66% { transform: translate(-5px, 10px); }
+}
+.animate-float-showcase {
+animation: float-showcase 10s ease-in-out infinite;
+}
+/* DS Nav */
+.ds-nav { position: sticky; top: 0; z-index: 50; background: #ffffff; border-bottom: 1px solid #e2e8f0; }
+.ds-nav-inner { max-width: 1440px; margin: 0 auto; padding: 0 1.5rem; height: 4rem; display: flex; align-items: center; gap: 2.5rem; overflow-x: auto; }
+.ds-nav a { font-size: 0.875rem; font-weight: 500; color: #0f172a; white-space: nowrap; text-decoration: none; transition: color 0.2s; }
+.ds-nav a:hover, .ds-nav a.active { color: #dc2626; }
+/* DS Section */
+.ds-section { max-width: 1440px; margin: 0 auto; padding: 4rem 1.5rem; }
+.ds-section + .ds-section { border-top: 1px solid #f3f4f6; }
+.ds-section-title { font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #9333ea; margin-bottom: 0.5rem; }
+.ds-section-heading { font-size: 1.875rem; font-weight: 600; color: #111827; letter-spacing: -0.025em; margin-bottom: 2rem; }
+/* Typography table */
+.ds-type-row { display: flex; align-items: baseline; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid #f3f4f6; gap: 1.5rem; flex-wrap: wrap; }
+.ds-type-label { font-size: 0.75rem; font-weight: 500; color: #9ca3af; min-width: 100px; flex-shrink: 0; }
+.ds-type-preview { flex: 1; min-width: 200px; }
+.ds-type-spec { font-size: 0.6875rem; font-weight: 500; color: #d1d5db; white-space: nowrap; font-family: monospace; flex-shrink: 0; }
+/* Color swatches */
+.ds-swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+.ds-swatch { border-radius: 1rem; overflow: hidden; border: 1px solid #f3f4f6; }
+.ds-swatch-color { height: 80px; }
+.ds-swatch-info { padding: 0.75rem; background: white; }
+.ds-swatch-name { font-size: 0.8125rem; font-weight: 600; color: #111827; }
+.ds-swatch-value { font-size: 0.6875rem; color: #9ca3af; font-family: monospace; }
+/* Component row */
+.ds-comp-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding: 1.5rem 0; border-bottom: 1px solid #f3f4f6; }
+.ds-comp-label { font-size: 0.75rem; font-weight: 500; color: #9ca3af; min-width: 120px; }
+/* Motion gallery */
+.ds-motion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.ds-motion-card { background: #FAFAFF; border-radius: 1.5rem; padding: 2rem; border: 1px solid #f3f4f6; }
+.ds-motion-title { font-size: 0.875rem; font-weight: 600; color: #111827; margin-bottom: 0.25rem; }
+.ds-motion-desc { font-size: 0.75rem; color: #9ca3af; margin-bottom: 1rem; }
+.ds-motion-demo { height: 60px; display: flex; align-items: center; justify-content: center; }
+.ds-motion-demo .dot { width: 20px; height: 20px; border-radius: 50%; background: #9333ea; }
+/* Layout demo */
+.ds-layout-demo { background: #FAFAFF; border-radius: 1.5rem; padding: 1.5rem; border: 1px solid #f3f4f6; margin-bottom: 1.5rem; }
+.ds-layout-title { font-size: 0.875rem; font-weight: 600; color: #111827; margin-bottom: 1rem; }
+.ds-placeholder { background: #EFE9FA; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 0.6875rem; color: #7c3aed; font-weight: 500; }
+</style>
+</head>
+<body class="bg-white text-gray-900 selection:bg-purple-200 selection:text-purple-900">
+
+<!-- DS Navigation -->
+<nav class="ds-nav">
+<div class="ds-nav-inner no-scrollbar">
+<a href="#hero" class="active font-display" style="font-weight:700; font-size: 1.25rem;">Jeová Jireh DS</a>
+<a href="#hero">Hero</a>
+<a href="#typography">Typography</a>
+<a href="#colors">Colors</a>
+<a href="#components">Components</a>
+<a href="#layout">Layout</a>
+<a href="#motion">Motion</a>
+<a href="#icons">Icons</a>
+</div>
+</nav>
+
+<<!-- ============================== -->
+<!-- 0) HERO — Full Height, Photo Overlay, Dark Blue Base -->
+<!-- ============================== -->
+<main class="relative w-full min-h-screen flex items-center justify-center isolate overflow-hidden" id="hero">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Igreja Congregação" class="w-full h-full object-cover object-center" />
+</div>
+<!-- Deep Blue Overlay (80% opacity) -->
+<div class="absolute inset-0 z-10 bg-[#0F172A]/80"></div>
+
+<!-- Content -->
+<div class="relative z-20 w-full max-w-[1440px] px-6 md:px-12 flex flex-col items-center justify-center text-center">
+<div class="animate-fade-in-up">
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8 shadow-lg">
+<i class="w-4 h-4 text-white fill-current" data-lucide="star"></i>
+<span class="text-sm font-medium text-white tracking-wider uppercase font-display">
+                  Design System 2.0
+                </span>
+</div>
+</div>
+<h1 class="animate-fade-in-up delay-100 text-5xl sm:text-7xl md:text-[5.5rem] leading-[1.1] font-extrabold text-white tracking-tight mb-8 font-display max-w-5xl">
+              Bem-vindo à Igreja <br />
+<span class="text-[#DC2626]">Jeová Jireh</span>
+</h1>
+<p class="animate-fade-in-up delay-200 text-lg sm:text-2xl text-slate-200 leading-relaxed max-w-3xl font-normal mb-12">
+              Uma identidade visual imponente, moderna e digna de uma grande instituição. Foco em clareza, constraste e reverência.
+            </p>
+<div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 justify-center">
+<a class="group inline-flex items-center justify-center gap-3 bg-[#DC2626] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-900/30 transition-all hover:bg-red-700 hover:-translate-y-1 active:scale-95" href="#typography">
+<span>Explorar Padrões</span>
+<i class="w-5 h-5 text-white transition-transform group-hover:translate-x-1" data-lucide="arrow-right"></i>
+</a>
+<a class="group inline-flex items-center justify-center gap-3 bg-white/10 text-white border border-white/20 backdrop-blur-md px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/20 hover:-translate-y-1 active:scale-95" href="#">
+<span>Visitar Site</span>
+<i class="w-5 h-5 text-white" data-lucide="external-link"></i>
+</a>
+</div>
+</div>
+</main>
+</div>
+</main>
+
+<!-- ============================== -->
+<!-- 1) TYPOGRAPHY -->
+<!-- ============================== -->
+<section class="ds-section" id="typography">
+<p class="ds-section-title">01 — Typography</p>
+<h2 class="ds-section-heading">Type Scale</h2>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Heading 1</span>
+<div class="ds-type-preview">
+<h1 class="text-5xl sm:text-6xl md:text-[5rem] font-extrabold text-[#0F172A] tracking-tight font-display">Bem-vindo à Igreja</h1>
+</div>
+<span class="ds-type-spec">80px / 84px · Montserrat ExtraBold</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Heading 2</span>
+<div class="ds-type-preview">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A] font-display">Nossa Visão</h2>
+</div>
+<span class="ds-type-spec">48px / 50px · Montserrat Bold</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Heading 3</span>
+<div class="ds-type-preview">
+<h3 class="text-3xl font-semibold text-white tracking-tight" style="color:#111827">Home &amp; Living</h3>
+</div>
+<span class="ds-type-spec">30px / 36px</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Heading 4</span>
+<div class="ds-type-preview">
+<h4 class="text-xl font-semibold text-gray-900 tracking-tight leading-snug">Mastering mobile productivity</h4>
+</div>
+<span class="ds-type-spec">20px / 28px</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Bold L</span>
+<div class="ds-type-preview">
+<span class="text-lg font-semibold text-gray-900 leading-tight">Minimalist Chair</span>
+</div>
+<span class="ds-type-spec">18px / 24px</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Bold M</span>
+<div class="ds-type-preview">
+<span class="text-base font-semibold text-gray-900">$249.00</span>
+</div>
+<span class="ds-type-spec">16px / 24px</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Bold S</span>
+<div class="ds-type-preview">
+<span class="text-sm font-medium text-gray-900">Shop Products</span>
+</div>
+<span class="ds-type-spec">14px / 20px</span>
+</div>
+
+<div class="ds-type-row">
+<span class="ds-type-label">Paragraph</span>
+<div class="ds-type-preview">
+<p class="text-lg text-[#1E293B] font-normal leading-relaxed">Uma identidade visual imponente, moderna e digna de uma grande instituição.</p>
+</div>
+<span class="ds-type-spec">18px / 28px · Inter Regular</span>
+</div>
+
+<div class="ds-type-row" style="border:none">
+<span class="ds-type-label">Accent (Red)</span>
+<div class="ds-type-preview">
+<span class="text-[#DC2626] font-bold tracking-wider uppercase">Jeová Jireh</span>
+</div>
+<span class="ds-type-spec">Uppercase CTA Text</span>
+</div>
+</section>
+
+<!-- ============================== -->
+<!-- 2) COLORS & SURFACES -->
+<!-- ============================== -->
+<section class="ds-section" id="colors">
+<p class="ds-section-title">02 — Colors &amp; Surfaces</p>
+<h2 class="ds-section-heading">Color Palette</h2>
+
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">Backgrounds</h3>
+<div class="ds-swatch-grid" style="margin-bottom:2rem">
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#FFFFFF; border-bottom:1px solid #e2e8f0;"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Branco</p><p class="ds-swatch-value">#FFFFFF</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#F8FAFC"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Cinza Gelo</p><p class="ds-swatch-value">#F8FAFC</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#0F172A"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Azul Marinho Base</p><p class="ds-swatch-value">#0F172A</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#1E293B"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Azul Escuro (Cards)</p><p class="ds-swatch-value">#1E293B</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#DC2626"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Destaque Vermelho</p><p class="ds-swatch-value">#DC2626 · CTAs</p></div></div>
+</div>
+
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">Text Colors</h3>
+<div class="ds-swatch-grid" style="margin-bottom:2rem">
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#0F172A"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Azul Marinho</p><p class="ds-swatch-value">#0F172A · headings</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#1E293B"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Texto Principal</p><p class="ds-swatch-value">#1E293B · body text</p></div></div>
+<div class="ds-swatch"><div class="ds-swatch-color" style="background:#475569"></div><div class="ds-swatch-info"><p class="ds-swatch-name">Texto Secundário</p><p class="ds-swatch-value">#475569 · captions</p></div></div>
+</div>
+
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">Glass &amp; Blur Surfaces</h3>
+<div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+<div style="width:200px;height:120px;border-radius:1.5rem;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:500;color:#374151" class="bg-white/80 backdrop-blur-xl border border-white/60 shadow-sm">Nav Glass · white/80 blur-xl</div>
+<div style="width:200px;height:120px;border-radius:1.5rem;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:500;color:#374151" class="bg-white/60 backdrop-blur-md border border-white/40 shadow-sm">Badge · white/60 blur-md</div>
+<div style="width:200px;height:120px;border-radius:1.5rem;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:500;color:#374151" class="bg-white/40 backdrop-blur-md border border-white/50 shadow-sm">CTA Glass · white/40 blur-md</div>
+<div style="width:200px;height:120px;border-radius:1.5rem;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:500;color:white;background:#0A0A0B" class="ring-1 ring-white/10">Footer · #0A0A0B ring-white/10</div>
+</div>
+</section>
+
+<!-- ============================== -->
+<!-- 3) UI COMPONENTS -->
+<!-- ============================== -->
+<section class="ds-section" id="components">
+<p class="ds-section-title">03 — UI Components</p>
+<h2 class="ds-section-heading">Components</h2>
+
+<!-- Primary CTA Button -->
+<h3 class="text-xl font-semibold text-[#0F172A] tracking-tight mb-4">Primary CTA Button</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Default</span>
+<a class="group inline-flex items-center justify-between gap-4 bg-[#DC2626] text-white pl-6 pr-2 py-2 rounded-xl font-bold shadow-lg shadow-red-900/10 transition-transform hover:-translate-y-1 hover:bg-red-700 active:scale-95" href="#">
+<span>Doar Agora</span>
+<div class="w-10 h-10 rounded-lg bg-white/10 group-hover:bg-white/20 flex items-center justify-center transition-colors">
+<i class="w-5 h-5 text-white" data-lucide="heart"></i>
+</div>
+</a>
+</div>
+
+<!-- Outline Button -->
+<h3 class="text-xl font-semibold text-[#0F172A] tracking-tight mb-4 mt-8">Outline Button (Navigation)</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Default / Hover</span>
+<a class="group flex items-center gap-2 bg-transparent text-[#DC2626] border-2 border-[#DC2626] hover:bg-[#DC2626] hover:text-white px-5 py-2.5 rounded-xl font-bold transition-colors duration-300" href="#">
+Entrar
+</a>
+</div>
+
+<!-- Deep Blue Button -->
+<h3 class="text-xl font-semibold text-[#0F172A] tracking-tight mb-4 mt-8">Dark Button (Secondary Action)</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Default</span>
+<button class="py-3 px-8 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl text-sm font-bold transition-colors flex items-center justify-center gap-2 shadow-lg shadow-black/10 active:scale-95 group/btn">
+<span>Ver Ministérios</span>
+<i class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" data-lucide="arrow-right"></i>
+</button>
+</div>
+
+<!-- Pill Button -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Pill Button</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Default</span>
+<a class="group inline-flex items-center gap-2 text-sm font-medium text-gray-900 bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-full transition-all" href="#">
+View All Categories
+<svg class="lucide lucide-arrow-right w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
+</div>
+
+<!-- Badge -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Badges &amp; Pills</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Hero Badge</span>
+<div class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-white/40 rounded-full px-4 py-1.5 shadow-sm" style="background:rgba(255,255,255,0.6)">
+<i class="w-3.5 h-3.5 text-gray-900 fill-current" data-lucide="shopping-bag"></i>
+<span class="text-xs font-medium text-gray-800 tracking-wide">Powered by Shopify</span>
+</div>
+<span class="ds-comp-label">Tag Pill</span>
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md text-xs font-semibold text-gray-900 tracking-wide border border-white/50 shadow-sm">Must Read</span>
+<span class="ds-comp-label">Product Badge</span>
+<div class="bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-bold text-gray-900 uppercase tracking-wider border border-white/60 shadow-sm inline-block">New</div>
+</div>
+
+<!-- Input -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Email Input (Footer)</h3>
+<div class="ds-comp-row" style="background:#0A0A0B;border-radius:1rem;padding:1.5rem">
+<span class="ds-comp-label" style="color:#6b7280">Default</span>
+<div class="relative" style="width:300px">
+<input class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-purple-500/50 transition-colors" placeholder="email@domain.com" type="email"/>
+<button class="absolute right-2 top-2 p-1.5 bg-white text-black rounded-lg hover:bg-gray-200 transition-colors shadow-lg">
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</button>
+</div>
+</div>
+
+<!-- Product Card -->
+<h3 class="text-xl font-semibold text-[#0F172A] tracking-tight mb-4 mt-8">Resource/Ministry Card</h3>
+<div style="max-width:380px; padding: 1.5rem; background: #f8fafc; border-radius: 1rem;">
+<div class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative aspect-video bg-slate-100 overflow-hidden flex items-center justify-center">
+<img alt="Culto" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"/>
+</div>
+<div class="p-6 space-y-2">
+<h3 class="text-xl font-bold text-[#0F172A] tracking-tight">Ministério de Jovens</h3>
+<p class="text-base text-[#475569]">Encontros todos os sábados às 19h30 para uma geração apaixonada por Deus.</p>
+<div class="pt-4 mt-2 border-t border-slate-100 flex items-center text-[#DC2626] font-semibold text-sm">
+<span>Saiba mais</span>
+<i class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" data-lucide="arrow-right"></i>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Feature Card -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Feature Card</h3>
+<div style="max-width:380px">
+<div class="bg-[#F9F8FF] rounded-[32px] p-8 sm:p-10 flex flex-col items-start h-full">
+<div class="w-12 h-12 bg-[#EFE9FA] rounded-full flex items-center justify-center mb-6">
+<i class="w-5 h-5 text-gray-900 fill-black" data-lucide="zap"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-3">Instant Digital Downloads</h3>
+<p class="text-base text-gray-500 leading-relaxed">Access your digital product purchase immediately after checkout.</p>
+</div>
+</div>
+
+<!-- Toast Notification -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Toast Notification</h3>
+<div class="ds-comp-row">
+<span class="ds-comp-label">Success</span>
+<div class="bg-white/80 backdrop-blur-xl pl-3 pr-5 py-3 rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] border border-white/60 flex items-center gap-3 inline-flex">
+<div class="w-9 h-9 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 ring-4 ring-white/50">
+<i class="w-4 h-4" data-lucide="check"></i>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-gray-900">Order Placed</span>
+<span class="text-[10px] text-gray-500">Just now from USA</span>
+</div>
+</div>
+</div>
+
+<!-- Social Icon Button -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-8">Social Icon Buttons (Footer)</h3>
+<div class="ds-comp-row" style="background:#0A0A0B;border-radius:1rem;padding:1.5rem">
+<span class="ds-comp-label" style="color:#6b7280">Default / Hover</span>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:scale-110 transition-all text-white border border-white/5" href="#"><i class="w-4 h-4" data-lucide="twitter"></i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:scale-110 transition-all text-white border border-white/5" href="#"><i class="w-4 h-4" data-lucide="instagram"></i></a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:scale-110 transition-all text-white border border-white/5" href="#"><i class="w-4 h-4" data-lucide="linkedin"></i></a>
+</div>
+</div>
+</section>
+
+<!-- ============================== -->
+<!-- 4) LAYOUT & SPACING -->
+<!-- ============================== -->
+<section class="ds-section" id="layout">
+<p class="ds-section-title">04 — Layout &amp; Spacing</p>
+<h2 class="ds-section-heading">Layout Patterns</h2>
+
+<!-- Container -->
+<div class="ds-layout-demo">
+<p class="ds-layout-title">Container · max-w-[1440px] mx-auto px-6</p>
+<div style="max-width:1440px;margin:0 auto;padding:0 1.5rem;border:1px dashed #d8b4fe;border-radius:0.5rem;height:60px;display:flex;align-items:center;justify-content:center">
+<span class="text-xs font-medium text-purple-600">1440px max-width centered container</span>
+</div>
+</div>
+
+<!-- Hero Split Layout -->
+<div class="ds-layout-demo">
+<p class="ds-layout-title">Hero Split · flex-col lg:flex-row</p>
+<div style="display:flex;gap:1rem;min-height:200px">
+<div class="ds-placeholder" style="flex:1;min-height:200px">Text Content · max-w-xl</div>
+<div class="ds-placeholder" style="flex:1;min-height:200px">Visual · w-1/2 perspective</div>
+</div>
+</div>
+
+<!-- Product Grid (3-col) -->
+<div class="ds-layout-demo">
+<p class="ds-layout-title">Product Grid · grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+<div class="ds-placeholder" style="height:160px">Card 1</div>
+<div class="ds-placeholder" style="height:160px">Card 2</div>
+<div class="ds-placeholder" style="height:160px">Card 3</div>
+</div>
+</div>
+
+<!-- Bento Grid -->
+<div class="ds-layout-demo">
+<p class="ds-layout-title">Bento Grid · grid-cols-12, 7+5 split, h-[600px]</p>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6" style="height:300px">
+<div class="lg:col-span-7 ds-placeholder" style="min-height:140px">Primary · col-span-7</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="ds-placeholder flex-1" style="min-height:60px">Top · col-span-5</div>
+<div class="ds-placeholder flex-1" style="min-height:60px">Bottom · col-span-5</div>
+</div>
+</div>
+</div>
+
+<!-- Section Spacing -->
+<div class="ds-layout-demo">
+<p class="ds-layout-title">Section Spacing Reference</p>
+<div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.75rem;color:#6b7280">
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Section margin-top</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">mt-24 sm:mt-32</code><span>96px / 128px</span></div>
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Card border-radius</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">rounded-[32px] / [40px] / [60px]</code></div>
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Card inner padding</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">p-8 sm:p-10</code><span>32px / 40px</span></div>
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Grid gap</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">gap-6</code><span>24px</span></div>
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Heading to body gap</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">mt-3 / mt-4</code><span>12px / 16px</span></div>
+<div style="display:flex;align-items:center;gap:1rem"><span style="min-width:180px;font-weight:500">Section header mb</span><code class="text-xs text-purple-600 bg-purple-50 px-2 py-0.5 rounded">mb-12 / mb-16</code><span>48px / 64px</span></div>
+</div>
+</div>
+</section>
+
+<!-- ============================== -->
+<!-- 5) MOTION & INTERACTION -->
+<!-- ============================== -->
+<section class="ds-section" id="motion">
+<p class="ds-section-title">05 — Motion &amp; Interaction</p>
+<h2 class="ds-section-heading">Animation Gallery</h2>
+
+<div class="ds-motion-grid">
+<!-- fadeInUp -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Fade In Up</p>
+<p class="ds-motion-desc">animate-fade-in-up · 0.8s cubic-bezier(0.16, 1, 0.3, 1)</p>
+<div class="ds-motion-demo">
+<div class="dot animate-fade-in-up" id="demo-fade" style="animation-iteration-count:infinite;animation-duration:2s"></div>
+</div>
+</div>
+
+<!-- Float Slow -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Float Slow</p>
+<p class="ds-motion-desc">animate-float-slow · 20s ease-in-out infinite</p>
+<div class="ds-motion-demo">
+<div class="dot animate-float-slow" style="width:24px;height:24px"></div>
+</div>
+</div>
+
+<!-- Float Medium -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Float Medium</p>
+<p class="ds-motion-desc">animate-float-medium · 15s ease-in-out infinite reverse</p>
+<div class="ds-motion-demo">
+<div class="dot animate-float-medium" style="width:24px;height:24px;background:#a78bfa"></div>
+</div>
+</div>
+
+<!-- Float Showcase -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Float Showcase</p>
+<p class="ds-motion-desc">animate-float-showcase · 10s ease-in-out infinite</p>
+<div class="ds-motion-demo">
+<div class="dot animate-float-showcase" style="width:24px;height:24px;background:#7c3aed"></div>
+</div>
+</div>
+
+<!-- Hover Lift -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Hover Lift</p>
+<p class="ds-motion-desc">group-hover:-translate-y-1 · 300ms</p>
+<div class="ds-motion-demo">
+<div class="group cursor-pointer">
+<div class="dot transition-transform duration-300 group-hover:-translate-y-2" style="width:40px;height:40px;border-radius:0.75rem;background:#F7F5FF;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center">
+<span style="font-size:10px;color:#6b7280">Hover</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Scale on Hover -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Scale Hover</p>
+<p class="ds-motion-desc">hover:scale-[1.02] / hover:scale-105 / hover:scale-110</p>
+<div class="ds-motion-demo" style="gap:1rem;display:flex">
+<div class="dot transition-transform duration-300 hover:scale-105 cursor-pointer" style="width:32px;height:32px;border-radius:0.5rem;font-size:8px;display:flex;align-items:center;justify-content:center;color:white">1.05</div>
+<div class="dot transition-transform duration-500 hover:scale-110 cursor-pointer" style="width:32px;height:32px;border-radius:0.5rem;background:#7c3aed;font-size:8px;display:flex;align-items:center;justify-content:center;color:white">1.10</div>
+</div>
+</div>
+
+<!-- Reveal on Scroll -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Reveal on Scroll</p>
+<p class="ds-motion-desc">reveal-on-scroll · translateY(40px) scale(0.96) blur(4px) → visible</p>
+<div class="ds-motion-demo">
+<div class="reveal-on-scroll" style="width:80px;height:40px;background:#9333ea;border-radius:0.75rem;display:flex;align-items:center;justify-content:center">
+<span style="font-size:10px;color:white;font-weight:500">Scroll ↓</span>
+</div>
+</div>
+</div>
+
+<!-- Button Press -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Button Press</p>
+<p class="ds-motion-desc">active:scale-[0.98] / active:scale-95</p>
+<div class="ds-motion-demo">
+<button class="px-4 py-2 bg-black text-white rounded-xl text-xs font-medium active:scale-95 transition-transform">Press me</button>
+</div>
+</div>
+
+<!-- Spin -->
+<div class="ds-motion-card">
+<p class="ds-motion-title">Spin (Ring)</p>
+<p class="ds-motion-desc">animate-[spin_40s_linear_infinite]</p>
+<div class="ds-motion-demo">
+<div style="width:50px;height:50px;border-radius:50%;border:1px solid #d8b4fe;animation:spin 6s linear infinite;position:relative">
+<div style="position:absolute;top:-3px;left:50%;width:6px;height:6px;background:#9333ea;border-radius:50%"></div>
+</div>
+</div>
+</div>
+</div>
+
+<style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+
+<!-- Delay Classes -->
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-10">Delay Classes</h3>
+<div style="display:flex;gap:1rem;flex-wrap:wrap">
+<div style="text-align:center">
+<div class="animate-fade-in-up" style="width:60px;height:60px;background:#EFE9FA;border-radius:1rem;margin-bottom:0.5rem;animation-iteration-count:infinite;animation-duration:3s"></div>
+<span class="text-xs text-gray-500">delay-0</span>
+</div>
+<div style="text-align:center">
+<div class="animate-fade-in-up delay-100" style="width:60px;height:60px;background:#E9D5FF;border-radius:1rem;margin-bottom:0.5rem;animation-iteration-count:infinite;animation-duration:3s"></div>
+<span class="text-xs text-gray-500">delay-100</span>
+</div>
+<div style="text-align:center">
+<div class="animate-fade-in-up delay-200" style="width:60px;height:60px;background:#D8B4FE;border-radius:1rem;margin-bottom:0.5rem;animation-iteration-count:infinite;animation-duration:3s"></div>
+<span class="text-xs text-gray-500">delay-200</span>
+</div>
+<div style="text-align:center">
+<div class="animate-fade-in-up delay-300" style="width:60px;height:60px;background:#C084FC;border-radius:1rem;margin-bottom:0.5rem;animation-iteration-count:infinite;animation-duration:3s"></div>
+<span class="text-xs text-gray-500">delay-300</span>
+</div>
+</div>
+</section>
+
+<!-- ============================== -->
+<!-- 6) ICONS -->
+<!-- ============================== -->
+<section class="ds-section" id="icons">
+<p class="ds-section-title">06 — Icons</p>
+<h2 class="ds-section-heading">Lucide Icon Set</h2>
+<p class="text-base text-gray-500 leading-relaxed mb-8">All icons used in the reference, rendered via <code class="text-xs text-purple-600 bg-purple-50 px-1.5 py-0.5 rounded">data-lucide</code> attribute with Lucide library.</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem">
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="search" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">search</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="shopping-bag" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">shopping-bag</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="arrow-up-right" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">arrow-up-right</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="move-up-right" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">move-up-right</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="arrow-right" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">arrow-right</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="arrow-left" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">arrow-left</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="check" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">check</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="lock" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">lock</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 fill-current mx-auto" data-lucide="star" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">star (filled)</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 fill-black mx-auto" data-lucide="zap" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">zap</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 fill-black mx-auto" data-lucide="fast-forward" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">fast-forward</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="twitter" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">twitter</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="instagram" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">instagram</span>
+</div>
+<div style="text-align:center;padding:1.5rem;background:#FAFAFF;border-radius:1rem;border:1px solid #f3f4f6">
+<i class="w-6 h-6 text-gray-900 mx-auto" data-lucide="linkedin" style="display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">linkedin</span>
+</div>
+</div>
+
+<h3 class="text-xl font-semibold text-gray-900 tracking-tight mb-4 mt-10">Size Variants</h3>
+<div style="display:flex;align-items:end;gap:2rem;flex-wrap:wrap">
+<div style="text-align:center">
+<i class="text-gray-900" data-lucide="shopping-bag" style="width:14px;height:14px;display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">w-3.5 h-3.5</span>
+</div>
+<div style="text-align:center">
+<i class="text-gray-900" data-lucide="shopping-bag" style="width:16px;height:16px;display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">w-4 h-4</span>
+</div>
+<div style="text-align:center">
+<i class="text-gray-900" data-lucide="shopping-bag" style="width:20px;height:20px;display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">w-5 h-5</span>
+</div>
+<div style="text-align:center">
+<i class="text-gray-900" data-lucide="shopping-bag" style="width:24px;height:24px;display:block;margin:0 auto 0.5rem"></i>
+<span class="text-xs text-gray-500">w-6 h-6</span>
+</div>
+</div>
+</section>
+
+<!-- Scripts -->
+<script>lucide.createIcons();</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+  // Smooth scroll for nav
+  document.querySelectorAll('.ds-nav a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Highlight active nav on scroll
+  const sections = document.querySelectorAll('section[id], main[id]');
+  const navLinks = document.querySelectorAll('.ds-nav a[href^="#"]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.ds-nav a[href="#${entry.target.id}"]`);
+        if (link) { link.classList.add('active'); link.style.color = '#111827'; }
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(s => io.observe(s));
+});
+</script>
+</body></html>

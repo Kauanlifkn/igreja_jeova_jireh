@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Bem-vindo</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+  <style>
+    /* === HERO SECTION ESPECÍFICA === */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%);
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      filter: brightness(0.7) contrast(1.2);
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom,
+        rgba(10, 22, 40, 0.7) 0%,
+        rgba(10, 22, 40, 0.5) 50%,
+        rgba(10, 22, 40, 0.9) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+      text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* === PRÓXIMOS EVENTOS === */
+    .events-section {
+      position: relative;
+      padding: 120px 0;
+      background: linear-gradient(180deg, #0A1628 0%, #0f1a32 50%, #0A1628 100%);
+    }
+
+    .events-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.3), transparent);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title-white {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title-white::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #DC2626, #B91C1C);
+      border-radius: 2px;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .event-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #DC2626, #B91C1C);
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+      border-color: rgba(220, 38, 38, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .event-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .event-date {
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.1) 100%);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #DC2626;
+      margin-bottom: 20px;
+    }
+
+    .event-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .event-description {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9375rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 20px;
+    }
+
+    .event-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .event-meta-item svg {
+      color: #DC2626;
+    }
+
+    /* === DECORAÇÕES === */
+    .decoration-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .decoration-circle-1 {
+      width: 400px;
+      height: 400px;
+      top: -200px;
+      right: -100px;
+    }
+
+    .decoration-circle-2 {
+      width: 300px;
+      height: 300px;
+      bottom: 100px;
+      left: -150px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: auto;
+        padding: 120px 20px 80px;
+      }
+
+      .events-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+
+      .event-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link">Projetos</a>
+        <a href="loja.html" class="nav-link">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Entrar</a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="decoration-circle decoration-circle-1"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title animate-fade-in-up">
+        Bem-vindo à<br/>
+        <span class="hero-gradient-text">Igreja Jeová Jireh</span>
+      </h1>
+
+      <p class="hero-subtitle animate-fade-in-up delay-1">
+        Uma comunidade de fé, esperança e amor onde você pertence. Juntos crescemos espiritualmente e impactamos vidas.
+      </p>
+
+      <div class="animate-fade-in-up delay-2" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+        <a href="igrejas.html" class="btn-primary">
+          <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+          Encontrar uma Igreja
+        </a>
+
+        <a href="#eventos" class="btn-secondary" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: #ffffff;">
+          <i data-lucide="calendar" style="width: 20px; height: 20px;"></i>
+          Ver Eventos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Próximos Eventos -->
+  <section id="eventos" class="events-section">
+    <div class="decoration-circle decoration-circle-2"></div>
+
+    <div class="section-header">
+      <h2 class="section-title-white animate-fade-in-up">
+        Próximos Eventos
+      </h2>
+      <p class="section-subtitle animate-fade-in-up delay-1" style="color: rgba(255, 255, 255, 0.7);">
+        Participe dos nossos eventos e cresça em comunidade. Momentos especiais de adoração, ensino e comunhão.
+      </p>
+    </div>
+
+    <div class="events-grid">
+      <!-- Event Card 1 -->
+      <div class="event-card animate-fade-in-up delay-1">
+        <span class="event-date">DOM 15 MAR • 10:00</span>
+        <h3 class="event-title">Culto de Celebração</h3>
+        <p class="event-description">
+          Um momento especial de adoração, louvor e mensagem inspiradora para fortalecer sua fé.
+        </p>
+        <div class="event-meta">
+          <div class="event-meta-item">
+            <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+            Sede Central
+          </div>
+          <div class="event-meta-item">
+            <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+            Presencial
+          </div>
+        </div>
+        <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+          <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          Mais Informações
+        </a>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="event-card animate-fade-in-up delay-2">
+        <span class="event-date">QUA 18 MAR • 19:30</span>
+        <h3 class="event-title">Estudo Bíblico Semanal</h3>
+        <p class="event-description">
+          Aprofunde seu conhecimento das escrituras sagradas com nossos pastores e líderes.
+        </p>
+        <div class="event-meta">
+          <div class="event-meta-item">
+            <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+            Todos os Núcleos
+          </div>
+          <div class="event-meta-item">
+            <i data-lucide="video" style="width: 16px; height: 16px;"></i>
+            Híbrido
+          </div>
+        </div>
+        <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+          <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          Mais Informações
+        </a>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="event-card animate-fade-in-up delay-3">
+        <span class="event-date">SÁB 21 MAR • 20:00</span>
+        <h3 class="event-title">Noite de Louvor</h3>
+        <p class="event-description">
+          Uma noite dedicada ao louvor e adoração, com música especial e momentos de oração.
+        </p>
+        <div class="event-meta">
+          <div class="event-meta-item">
+            <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+            Sede Central
+          </div>
+          <div class="event-meta-item">
+            <i data-lucide="music" style="width: 16px; height: 16px;"></i>
+            Ao Vivo
+          </div>
+        </div>
+        <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+          <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          Mais Informações
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Localizador</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link active">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link">Projetos</a>
+        <a href="loja.html" class="nav-link">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Entrar</a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link active">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-internal">
+    <div class="hero-internal-content">
+      <h1 class="hero-internal-title animate-fade-in-up">
+        Encontre sua Comunidade
+      </h1>
+      <p class="hero-internal-subtitle animate-fade-in-up delay-1">
+        Igrejas, núcleos e pontos de oração próximos de você
+      </p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <div class="content-wrapper">
+      <!-- Search Section -->
+      <section class="animate-fade-in-up" style="max-width: 700px; margin: 0 auto 64px;">
+        <div class="search-input" style="margin-bottom: 24px;">
+          <input type="text" class="form-input" placeholder="Digite seu endereço para encontrar igrejas próximas" aria-label="Buscar igrejas"/>
+          <i data-lucide="search" class="search-input-icon" style="width: 20px; height: 20px;"></i>
+        </div>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+          <button class="btn-primary">
+            <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+            Pesquisar
+          </button>
+          <button class="btn-outline-red">
+            <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+            Usar minha localização
+          </button>
+        </div>
+      </section>
+
+      <!-- Churches Grid -->
+      <section>
+        <div class="grid-3">
+          <!-- Church Card 1 -->
+          <div class="card animate-fade-in-up delay-1">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="church" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Sede Central</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Pastor Rafael Silva</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Rua Principal, 123
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 99999-9999
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+
+          <!-- Church Card 2 -->
+          <div class="card animate-fade-in-up delay-2">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="church" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Núcleo Norte</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Pastor André Santos</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Av. Brasil, 456
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 98888-8888
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+
+          <!-- Church Card 3 -->
+          <div class="card animate-fade-in-up delay-3">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="church" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Núcleo Sul</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Pastora Maria Costa</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Rua do Sul, 789
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 97777-7777
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+
+          <!-- Church Card 4 -->
+          <div class="card animate-fade-in-up delay-1">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="church" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Núcleo Leste</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Pastor João Pedro</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Av. Leste, 321
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 96666-6666
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+
+          <!-- Church Card 5 -->
+          <div class="card animate-fade-in-up delay-2">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="church" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Núcleo Oeste</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Pastora Ana Clara</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Rua Oeste, 654
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 95555-5555
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+
+          <!-- Church Card 6 -->
+          <div class="card animate-fade-in-up delay-3">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="heart" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Ponto de Oração</h3>
+              <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px;">Coordenador Paulo</p>
+              <div class="card-meta" style="margin-bottom: 16px;">
+                <div class="card-meta-item">
+                  <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                  Praça Central
+                </div>
+                <div class="card-meta-item">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  (11) 94444-4444
+                </div>
+              </div>
+              <a href="#" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+                Acessar Congregação
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

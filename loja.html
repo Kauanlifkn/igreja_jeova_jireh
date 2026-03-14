@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Loja Virtual</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link">Projetos</a>
+        <a href="loja.html" class="nav-link active">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="loja.html" style="position: relative; color: var(--navy-dark); padding: 8px;" aria-label="Carrinho">
+          <i data-lucide="shopping-bag" style="width: 24px; height: 24px;"></i>
+          <span style="position: absolute; top: 0; right: 0; width: 18px; height: 18px; background: #DC2626; color: white; border-radius: 50%; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; font-weight: 600;">3</span>
+        </a>
+        <a href="login.html" class="btn-login">Entrar</a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link active">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-internal">
+    <div class="hero-internal-content">
+      <h1 class="hero-internal-title animate-fade-in-up">
+        Loja Virtual
+      </h1>
+      <p class="hero-internal-subtitle animate-fade-in-up delay-1">
+        Encontre livros, materiais de estudo e muito mais
+      </p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <div class="content-wrapper">
+      <!-- Search Section -->
+      <section class="animate-fade-in-up" style="max-width: 700px; margin: 0 auto 64px;">
+        <div class="search-input" style="margin-bottom: 24px;">
+          <input type="text" class="form-input" placeholder="Buscar produtos..." aria-label="Buscar produtos"/>
+          <i data-lucide="search" class="search-input-icon" style="width: 20px; height: 20px;"></i>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 8px 20px; font-size: 0.875rem;">Todos</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Livros</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Música</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Devocionais</button>
+          <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.875rem;">Camisetas</button>
+        </div>
+      </section>
+
+      <div style="display: flex; gap: 48px;">
+        <!-- Filters Sidebar -->
+        <aside style="width: 280px; flex-shrink: 0;" class="animate-fade-in-up delay-1">
+          <div style="background: var(--white); border-radius: 20px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+            <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 20px;">Filtros</h3>
+
+            <!-- Price -->
+            <div style="margin-bottom: 24px;">
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; color: var(--navy-dark); margin-bottom: 12px;">Preço</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="number" placeholder="Mín" style="flex: 1; padding: 8px 12px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem;"/>
+                <input type="number" placeholder="Máx" style="flex: 1; padding: 8px 12px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem;"/>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div style="margin-bottom: 24px;">
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; color: var(--navy-dark); margin-bottom: 12px;">Categorias</label>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" style="width: 16px; height: 16px; border-radius: 4px; accent-color: #DC2626;"/>
+                  Livros
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" style="width: 16px; height: 16px; border-radius: 4px; accent-color: #DC2626;"/>
+                  Música
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" style="width: 16px; height: 16px; border-radius: 4px; accent-color: #DC2626;"/>
+                  Devocionais
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" style="width: 16px; height: 16px; border-radius: 4px; accent-color: #DC2626;"/>
+                  Camisetas
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); cursor: pointer;">
+                  <input type="checkbox" style="width: 16px; height: 16px; border-radius: 4px; accent-color: #DC2626;"/>
+                  Acessórios
+                </label>
+              </div>
+            </div>
+
+            <!-- Sizes -->
+            <div>
+              <label style="display: block; font-size: 0.875rem; font-weight: 600; color: var(--navy-dark); margin-bottom: 12px;">Tamanhos</label>
+              <div style="display: flex; flex-wrap: gap: 8px;">
+                <button style="padding: 8px 16px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem; color: var(--text-secondary); transition: all 0.3s ease;">P</button>
+                <button style="padding: 8px 16px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem; color: var(--text-secondary); transition: all 0.3s ease;">M</button>
+                <button style="padding: 8px 16px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem; color: var(--text-secondary); transition: all 0.3s ease;">G</button>
+                <button style="padding: 8px 16px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 0.875rem; color: var(--text-secondary); transition: all 0.3s ease;">GG</button>
+              </div>
+            </div>
+
+            <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 24px; font-size: 0.875rem;">
+              <i data-lucide="filter" style="width: 16px; height: 16px;"></i>
+              Aplicar Filtros
+            </button>
+          </div>
+        </aside>
+
+        <!-- Products Grid -->
+        <section style="flex: 1;" class="animate-fade-in-up delay-2">
+          <div class="grid-3">
+            <!-- Product Card 1 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-1" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="book" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Bíblia Sagrada - Edição Especial</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 89,90</p>
+              </div>
+            </a>
+
+            <!-- Product Card 2 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-2" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="book-open" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Devocional Diário - 365 Dias</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 49,90</p>
+              </div>
+            </a>
+
+            <!-- Product Card 3 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-3" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="music" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">CD Louvor e Adoração</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 29,90</p>
+              </div>
+            </a>
+
+            <!-- Product Card 4 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-1" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="shirt" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Camiseta Jeová Jireh - Logo</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 59,90</p>
+              </div>
+            </a>
+
+            <!-- Product Card 5 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-2" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="book" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Livro: O Poder da Fé</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 39,90</p>
+              </div>
+            </a>
+
+            <!-- Product Card 6 -->
+            <a href="produto.html" class="card animate-fade-in-up delay-3" style="display: block;">
+              <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="pen-tool" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+                <button style="position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-label="Favoritar">
+                  <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                </button>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Kit Caderno e Caneta</h3>
+                <p style="font-size: 1.25rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 24,90</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

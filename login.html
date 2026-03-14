@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Entrar</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%);
+      min-height: 100vh;
+    }
+
+    .login-page {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    .auth-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 48px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .auth-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .auth-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .auth-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      font-size: 0.875rem;
+    }
+
+    .form-options label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .form-options input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      accent-color: #DC2626;
+    }
+
+    .form-options a {
+      color: #DC2626;
+      font-weight: 600;
+    }
+
+    .auth-submit {
+      width: 100%;
+      padding: 16px 32px;
+      font-size: 1rem;
+    }
+
+    .social-divider {
+      position: relative;
+      margin: 32px 0;
+    }
+
+    .social-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gray-light);
+    }
+
+    .social-divider span {
+      position: relative;
+      background: var(--white);
+      padding: 0 16px;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .social-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .social-btn {
+      padding: 12px;
+      border: 1px solid var(--gray-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--gray-ice);
+      transform: translateY(-2px);
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .auth-footer a {
+      color: #DC2626;
+      font-weight: 600;
+    }
+
+    .benefits {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .benefits p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .auth-card {
+        padding: 32px 24px;
+      }
+
+      .social-buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link">Projetos</a>
+        <a href="loja.html" class="nav-link">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="loja.html" style="position: relative; color: var(--navy-dark); padding: 8px;" aria-label="Carrinho">
+          <i data-lucide="shopping-bag" style="width: 24px; height: 24px;"></i>
+          <span style="position: absolute; top: 0; right: 0; width: 18px; height: 18px; background: #DC2626; color: white; border-radius: 50%; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; font-weight: 600;">3</span>
+        </a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Login Page -->
+  <main class="login-page animate-fade-in-up">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-icon">
+          <i data-lucide="church" style="width: 40px; height: 40px; color: #ffffff;"></i>
+        </div>
+        <h1 class="auth-title">Bem-vindo de volta</h1>
+        <p class="auth-subtitle">Faça login para continuar</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); handleLogin();">
+        <div class="form-group">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            class="form-input"
+            placeholder="seu@email.com"
+            required
+            aria-describedby="email-error"
+          />
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <label for="password" class="form-label">Senha</label>
+            <a href="#" style="font-size: 0.875rem; color: #DC2626; font-weight: 600;">Esqueceu a senha?</a>
+          </div>
+          <div style="position: relative;">
+            <input
+              id="password"
+              type="password"
+              class="form-input"
+              style="padding-right: 48px;"
+              placeholder="••••••••"
+              required
+            />
+            <button type="button" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--text-secondary); transition: color 0.3s ease;" aria-label="Mostrar senha">
+              <i data-lucide="eye" style="width: 20px; height: 20px;"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label>
+            <input type="checkbox"/>
+            Lembrar-me
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary auth-submit">
+          Entrar
+        </button>
+      </form>
+
+      <div class="social-divider">
+        <span>ou continue com</span>
+      </div>
+
+      <div class="social-buttons">
+        <button class="social-btn">
+          <i data-lucide="facebook" style="width: 20px; height: 20px; color: #1877F2;"></i>
+          Facebook
+        </button>
+        <button class="social-btn">
+          <i data-lucide="mail" style="width: 20px; height: 20px; color: #DB4437;"></i>
+          Google
+        </button>
+      </div>
+
+      <div class="auth-footer">
+        <p>Não tem uma conta?
+          <a href="#">Cadastre-se</a>
+        </p>
+      </div>
+
+      <div class="benefits">
+        <p><i data-lucide="check" style="width: 16px; height: 16px; color: #22c55e;"></i> Acesso exclusivo a recursos</p>
+        <p><i data-lucide="check" style="width: 16px; height: 16px; color: #22c55e;"></i> Inscrição em eventos</p>
+        <p><i data-lucide="check" style="width: 16px; height: 16px; color: #22c55e;"></i> Descontos na loja</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    function handleLogin() {
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email.value)) {
+        alert('Por favor, insira um e-mail válido');
+        email.focus();
+        return;
+      }
+
+      if (password.value.length < 6) {
+        alert('A senha deve ter pelo menos 6 caracteres');
+        password.focus();
+        return;
+      }
+
+      alert('Login realizado com sucesso! Redirecionando...');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

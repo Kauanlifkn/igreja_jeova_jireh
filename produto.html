@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Igreja Evangélica Jeová Jireh - Bíblia Sagrada</title>
+  <script src="assets/resource_3fa48481346f.es"></script>
+  <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+  <link href="assets/css2_e81fa058d8df.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles-global.css"/>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <nav class="header-global">
+    <div class="header-container">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </a>
+
+      <div class="header-nav">
+        <a href="igrejas.html" class="nav-link">Igrejas</a>
+        <a href="historia.html" class="nav-link">História</a>
+        <a href="projetos.html" class="nav-link">Projetos</a>
+        <a href="loja.html" class="nav-link active">Loja</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="loja.html" style="position: relative; color: var(--navy-dark); padding: 8px;" aria-label="Carrinho">
+          <i data-lucide="shopping-bag" style="width: 24px; height: 24px;"></i>
+          <span style="position: absolute; top: 0; right: 0; width: 18px; height: 18px; background: #DC2626; color: white; border-radius: 50%; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; font-weight: 600;">3</span>
+        </a>
+        <a href="login.html" class="btn-login">Entrar</a>
+        <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+        </div>
+        <span>Jeová Jireh</span>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="igrejas.html" class="mobile-nav-link">Igrejas</a>
+      <a href="historia.html" class="mobile-nav-link">História</a>
+      <a href="projetos.html" class="mobile-nav-link">Projetos</a>
+      <a href="loja.html" class="mobile-nav-link active">Loja</a>
+      <a href="login.html" class="mobile-nav-link">Entrar</a>
+    </nav>
+  </div>
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <div class="content-wrapper">
+      <!-- Breadcrumb -->
+      <nav class="animate-fade-in-up" style="margin-bottom: 32px;" aria-label="Breadcrumb">
+        <ol style="display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary);">
+          <li>
+            <a href="loja.html" style="display: flex; align-items: center; gap: 4px; color: inherit;">
+              <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
+              Loja
+            </a>
+          </li>
+          <li>/</li>
+          <li style="color: var(--navy-dark); font-weight: 500;">Bíblia Sagrada - Edição Especial</li>
+        </ol>
+      </nav>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px;">
+        <!-- Gallery -->
+        <div class="animate-fade-in-up">
+          <div style="aspect-square: 1/1; background: var(--white); border-radius: 20px; overflow: hidden; margin-bottom: 24px; padding: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+            <i data-lucide="book" style="width: 200px; height: 200px; color: #0A1628;"></i>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <button style="aspect-ratio: 1/1; background: var(--white); border: 2px solid #DC2626; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+              <i data-lucide="book" style="width: 32px; height: 32px; color: #0A1628;"></i>
+            </button>
+            <button style="aspect-ratio: 1/1; background: var(--white); border: 2px solid transparent; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+              <i data-lucide="book-open" style="width: 32px; height: 32px; color: var(--navy-light);"></i>
+            </button>
+            <button style="aspect-ratio: 1/1; background: var(--white); border: 2px solid transparent; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+              <i data-lucide="bookmark" style="width: 32px; height: 32px; color: var(--navy-light);"></i>
+            </button>
+            <button style="aspect-ratio: 1/1; background: var(--white); border: 2px solid transparent; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+              <i data-lucide="search" style="width: 32px; height: 32px; color: var(--navy-light);"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="animate-fade-in-up delay-1">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span style="background: rgba(34, 197, 94, 0.1); color: #22c55e; padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">Em estoque</span>
+            <span style="background: var(--gray-ice); color: var(--text-secondary); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem;">Livros</span>
+          </div>
+
+          <h1 style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; color: var(--navy-dark); margin-bottom: 16px;">Bíblia Sagrada - Edição Especial</h1>
+
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 4px;">
+              <i data-lucide="star" style="width: 20px; height: 20px; color: #fbbf24; fill: currentColor;"></i>
+              <i data-lucide="star" style="width: 20px; height: 20px; color: #fbbf24; fill: currentColor;"></i>
+              <i data-lucide="star" style="width: 20px; height: 20px; color: #fbbf24; fill: currentColor;"></i>
+              <i data-lucide="star" style="width: 20px; height: 20px; color: #fbbf24; fill: currentColor;"></i>
+              <i data-lucide="star" style="width: 20px; height: 20px; color: #d1d5db;"></i>
+            </div>
+            <span style="font-size: 0.875rem; color: var(--text-secondary);">(127 avaliações)</span>
+          </div>
+
+          <p style="font-size: 2rem; font-weight: 700; color: #DC2626; margin-bottom: 24px;">R$ 89,90</p>
+
+          <div style="margin-bottom: 24px;">
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; color: var(--navy-dark); margin-bottom: 12px;">Quantidade</label>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <button style="width: 40px; height: 40px; border: 1px solid var(--gray-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease;">
+                <i data-lucide="minus" style="width: 20px; height: 20px;"></i>
+              </button>
+              <input type="number" value="1" min="1" style="width: 64px; text-align: center; padding: 8px; border: 1px solid var(--gray-light); border-radius: 8px; font-size: 1rem;"/>
+              <button style="width: 40px; height: 40px; border: 1px solid var(--gray-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.3s ease;">
+                <i data-lucide="plus" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 32px;">
+            <button class="btn-primary" style="flex: 1; justify-content: center;">
+              <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+              Adicionar ao Carrinho
+            </button>
+            <button class="btn-secondary" style="flex: 1; justify-content: center;">
+              Comprar Agora
+              <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+            </button>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+            <div style="display: flex; align-items-start; gap: 12px; padding: 16px; background: var(--gray-ice); border-radius: 12px;">
+              <i data-lucide="truck" style="width: 20px; height: 20px; color: #DC2626; flex-shrink: 0; margin-top: 2px;"></i>
+              <div>
+                <p style="font-weight: 600; color: var(--navy-dark); font-size: 0.9375rem;">Frete Grátis</p>
+                <p style="font-size: 0.875rem; color: var(--text-secondary);">Para compras acima de R$ 150,00</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items-start; gap: 12px; padding: 16px; background: var(--gray-ice); border-radius: 12px;">
+              <i data-lucide="shield-check" style="width: 20px; height: 20px; color: #DC2626; flex-shrink: 0; margin-top: 2px;"></i>
+              <div>
+                <p style="font-weight: 600; color: var(--navy-dark); font-size: 0.9375rem;">Compra Segura</p>
+                <p style="font-size: 0.875rem; color: var(--text-secondary);">Seus dados protegidos</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items-start; gap: 12px; padding: 16px; background: var(--gray-ice); border-radius: 12px;">
+              <i data-lucide="rotate-ccw" style="width: 20px; height: 20px; color: #DC2626; flex-shrink: 0; margin-top: 2px;"></i>
+              <div>
+                <p style="font-weight: 600; color: var(--navy-dark); font-size: 0.9375rem;">Troca Grátis</p>
+                <p style="font-size: 0.875rem; color: var(--text-secondary);">7 dias para troca</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 16px;">Descrição</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">
+              A Bíblia Sagrada - Edição Especial é uma obra de arte espiritual. Com tradução contemporânea e notas explicativas, esta edição é perfeita para estudo diário e meditação.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px;">
+              Inclui mapa bíblico, concordância e planos de leitura. Capa em couro sintético de alta qualidade com acabamento dourado nas bordas.
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 12px;">
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: #DC2626;"></i>
+                Tradução contemporânea
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: #DC2626;"></i>
+                Notas e comentários
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: #DC2626;"></i>
+                Mapa bíblico colorido
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: #DC2626;"></i>
+                Concordância
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary);">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: #DC2626;"></i>
+                Planos de leitura
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <section style="margin-top: 64px;" class="animate-fade-in-up delay-1">
+        <h2 style="font-size: 1.75rem; font-weight: 700; color: var(--navy-dark); margin-bottom: 32px;">Produtos Relacionados</h2>
+        <div class="grid-3">
+          <a href="produto.html" class="card animate-fade-in-up delay-1" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="book-open" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Devocional Diário - 365 Dias</h3>
+              <p style="font-size: 1.125rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 49,90</p>
+            </div>
+          </a>
+          <a href="produto.html" class="card animate-fade-in-up delay-2" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="book" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Livro: O Poder da Fé</h3>
+              <p style="font-size: 1.125rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 39,90</p>
+            </div>
+          </a>
+          <a href="produto.html" class="card animate-fade-in-up delay-3" style="display: block;">
+            <div class="card-image" style="background: linear-gradient(135deg, #0A1628 0%, #1a2744 100%); display: flex; align-items: center; justify-content: center;">
+              <i data-lucide="bookmark" style="width: 64px; height: 64px; color: rgba(255,255,255,0.2);"></i>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Kit Marcapáginas</h3>
+              <p style="font-size: 1.125rem; font-weight: 700; color: #DC2626; margin-bottom: 16px;">R$ 19,90</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="header-logo" style="margin-bottom: 16px;">
+            <div class="header-logo-icon">
+              <i data-lucide="church" style="width: 24px; height: 24px;"></i>
+            </div>
+            <span>Jeová Jireh</span>
+          </div>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Comunidade acolhedora, fé transformadora e amor incondicional
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Igrejas</h4>
+          <nav class="footer-links">
+            <a href="igrejas.html" class="footer-link">Localizador</a>
+            <a href="#" class="footer-link">Sede Central</a>
+            <a href="#" class="footer-link">Núcleos</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Ministérios</h4>
+          <nav class="footer-links">
+            <a href="projetos.html" class="footer-link">Projetos Sociais</a>
+            <a href="#" class="footer-link">Jovens</a>
+            <a href="#" class="footer-link">Crianças</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <a href="#" class="footer-link">Fale Conosco</a>
+            <a href="login.html" class="footer-link">Área do Membro</a>
+            <a href="loja.html" class="footer-link">Loja Virtual</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Evangélica Jeová Jireh. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('mobileMenuOverlay').classList.toggle('open');
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
